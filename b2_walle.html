@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | B2 - Tecnología, planeta y futuro</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español B2</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <!-- 1 -->
+  <section class="slide active">
+  <span class="kicker">Lección B2</span>
+  <h1>Tecnología, planeta<br>y futuro</h1>
+  <p>
+    Debate problemas ambientales, consumo, tecnología y futuro usando una escena/tráiler de
+    <span class="highlight">WALL·E</span>.
+  </p>
+
+  <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+  <div class="hero">
+    <div class="card">
+      <h3>Objetivos</h3>
+      <ul>
+        <li>analizar un problema social y ambiental;</li>
+        <li>expresar causa, consecuencia e hipótesis;</li>
+        <li>defender una opinión con argumentos;</li>
+        <li>proponer soluciones realistas;</li>
+        <li>participar en un mini debate.</li>
+      </ul>
+    </div>
+
+    <div class="poster walle">
+      <div class="poster-content">
+        <span class="tag">Disney / Pixar</span>
+        <div class="poster-title">WALL·E</div>
+        <div class="poster-sub">Consumo, planeta, tecnología y decisiones humanas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de ver</h2>
+
+    <div class="box">
+      <p>Responde con frases completas:</p>
+      <ul>
+        <li>¿Cómo imaginas el planeta dentro de 100 años?</li>
+        <li>¿Crees que la tecnología ayuda más de lo que perjudica?</li>
+        <li>¿Qué problema ambiental te preocupa más?</li>
+        <li>¿Las personas consumen más de lo necesario?</li>
+      </ul>
+    </div>
+
+    <div class="tip">
+      Intenta usar: <strong>“Desde mi punto de vista…”</strong>, <strong>“Me preocupa que…”</strong> y <strong>“Es posible que…”</strong>.
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide">
+    <span class="kicker">Vocabulary</span>
+    <h2>Vocabulario principal</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Medio ambiente</h3>
+        <p>contaminación</p>
+        <p>basura</p>
+        <p>reciclaje</p>
+        <p>desperdicio</p>
+        <p>calentamiento global</p>
+        <p>recursos naturales</p>
+      </div>
+
+      <div class="card">
+        <h3>Sociedad y tecnología</h3>
+        <p>consumo excesivo</p>
+        <p>dependencia tecnológica</p>
+        <p>comodidad</p>
+        <p>automatización</p>
+        <p>responsabilidad colectiva</p>
+        <p>futuro sostenible</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+  <span class="kicker">Pronunciation</span>
+  <h2>Escucha y repite</h2>
+  <p>Clique para ouvir a pronúncia em espanhol.</p>
+
+  <div class="grid">
+    <div class="card">
+      <button onclick="speakSpanish('contaminación')">🔊 contaminación</button>
+      <button onclick="speakSpanish('consumo excesivo')">🔊 consumo excesivo</button>
+      <button onclick="speakSpanish('responsabilidad colectiva')">🔊 responsabilidad colectiva</button>
+    </div>
+
+    <div class="card">
+      <button onclick="speakSpanish('dependencia tecnológica')">🔊 dependencia tecnológica</button>
+      <button onclick="speakSpanish('futuro sostenible')">🔊 futuro sostenible</button>
+      <button onclick="speakSpanish('recursos naturales')">🔊 recursos naturales</button>
+    </div>
+  </div>
+</section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <span class="kicker">Watch</span>
+    <h2>Mira la escena / tráiler</h2>
+    <p>
+      Observa el ambiente, el comportamiento de los humanos, el papel de la tecnología y el estado del planeta.
+    </p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/qF7p4lZ00RA"
+        title="WALL-E trailer oficial español"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="tip">
+      Enquanto assiste, pense: <strong>¿Qué problema muestra la escena?</strong>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <span class="kicker">First impression</span>
+    <h2>Primera impresión</h2>
+
+    <div class="box">
+      <p>Elige una opinión inicial:</p>
+
+      <button onclick="generateText('firstImpression','Me parece que la escena muestra un futuro preocupante porque los humanos dependen demasiado de la tecnología.')">
+        futuro preocupante
+      </button>
+
+      <button onclick="generateText('firstImpression','Me parece que la escena critica el consumo excesivo y la falta de responsabilidad ambiental.')">
+        crítica al consumo
+      </button>
+
+      <button onclick="generateText('firstImpression','Me parece que la historia usa la animación para hablar de un problema muy serio.')">
+        animación con tema serio
+      </button>
+
+      <p class="generated" id="firstImpression"></p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <span class="kicker">Comprehension quiz</span>
+    <h2>Comprensión</h2>
+
+    <div class="box">
+      <p><strong>1. El tema principal parece ser...</strong></p>
+      <button class="option" onclick="checkAnswer(this,false,'quizB2a')">A) una competencia deportiva</button>
+      <button class="option" onclick="checkAnswer(this,true,'quizB2a')">B) el futuro del planeta y la sociedad</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizB2a')">C) una historia medieval</button>
+      <p class="feedback" id="quizB2a"></p>
+    </div>
+
+    <div class="box" style="margin-top:18px;">
+      <p><strong>2. La película parece criticar...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'quizB2b')">A) el consumo excesivo y la dependencia tecnológica</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizB2b')">B) los deportes extremos</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizB2b')">C) las vacaciones en familia</button>
+      <p class="feedback" id="quizB2b"></p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <span class="kicker">Cause and consequence</span>
+    <h2>Causa y consecuencia</h2>
+
+    <div class="table-like">
+      <div class="table-cell">
+        <h3>Causa</h3>
+        <p>El consumo excesivo aumenta la cantidad de basura.</p>
+      </div>
+
+      <div class="table-cell">
+        <h3>Consecuencia</h3>
+        <p>El planeta se vuelve más contaminado y menos habitable.</p>
+      </div>
+
+      <div class="table-cell">
+        <h3>Causa</h3>
+        <p>Las personas dependen demasiado de la tecnología.</p>
+      </div>
+
+      <div class="table-cell">
+        <h3>Consecuencia</h3>
+        <p>Pueden perder autonomía y conexión con el mundo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <span class="kicker">Phrase builder</span>
+    <h2>Construye un argumento</h2>
+
+    <div class="box">
+      <p>Escolha uma ideia e gere um argumento B2:</p>
+
+      <button onclick="generateText('argument1','Si seguimos consumiendo sin pensar, es probable que aumenten los problemas ambientales en el futuro.')">
+        consumo
+      </button>
+
+      <button onclick="generateText('argument1','Aunque la tecnología facilita la vida, también puede crear dependencia si no la usamos con equilibrio.')">
+        tecnologia
+      </button>
+
+      <button onclick="generateText('argument1','Desde mi punto de vista, la responsabilidad ambiental no depende solo de los gobiernos, sino también de las decisiones individuales.')">
+        responsabilidade
+      </button>
+
+      <p class="generated" id="argument1"></p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <span class="kicker">Grammar focus</span>
+    <h2>Hipótesis y posibilidad</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Es posible que + subjuntivo</h3>
+        <p>Es posible que el planeta cambie mucho en el futuro.</p>
+        <p>Es posible que las personas dependan más de la tecnología.</p>
+      </div>
+
+      <div class="card">
+        <h3>Si + presente, futuro</h3>
+        <p>Si no cambiamos nuestros hábitos, tendremos más problemas.</p>
+        <p>Si reciclamos más, reduciremos la basura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine conceitos e significados</h2>
+
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'consumo')">consumo excesivo</button>
+        <button class="word" onclick="selectWord(this,'sostenible')">futuro sostenible</button>
+        <button class="word" onclick="selectWord(this,'dependencia')">dependencia tecnológica</button>
+        <button class="word" onclick="selectWord(this,'recursos')">recursos naturales</button>
+      </div>
+
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'dependencia','matchB2')">quando a tecnologia controla muitos hábitos</button>
+        <button class="meaning" onclick="matchWord(this,'recursos','matchB2')">elementos da natureza usados pela sociedade</button>
+        <button class="meaning" onclick="matchWord(this,'consumo','matchB2')">comprar ou usar mais do que o necessário</button>
+        <button class="meaning" onclick="matchWord(this,'sostenible','matchB2')">um futuro equilibrado para pessoas e planeta</button>
+      </div>
+    </div>
+
+    <p class="feedback" id="matchB2"></p>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <span class="kicker">Agree or disagree</span>
+    <h2>¿Estás de acuerdo?</h2>
+
+    <div class="box">
+      <p><strong>Frase:</strong> “La tecnología siempre mejora la vida de las personas.”</p>
+
+      <button onclick="generateText('agreeB2','Estoy de acuerdo parcialmente, porque la tecnología facilita muchas tareas, pero también puede generar dependencia.')">
+        parcialmente de acuerdo
+      </button>
+
+      <button onclick="generateText('agreeB2','No estoy de acuerdo, porque la tecnología no siempre resuelve los problemas sociales o ambientales.')">
+        no estoy de acuerdo
+      </button>
+
+      <button onclick="generateText('agreeB2','Estoy de acuerdo, siempre que la tecnología se use de manera responsable y consciente.')">
+        estoy de acuerdo con condición
+      </button>
+
+      <p class="generated" id="agreeB2"></p>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide">
+    <span class="kicker">Problem solving</span>
+    <h2>Propón una solución</h2>
+
+    <div class="box">
+      <p>Situación: una ciudad produce demasiada basura y las personas consumen productos descartables todos los días.</p>
+
+      <button onclick="generateText('solutionB2','Una solución sería crear campañas de educación ambiental y reducir el uso de productos descartables.')">
+        educación ambiental
+      </button>
+
+      <button onclick="generateText('solutionB2','El gobierno debería incentivar el reciclaje y responsabilizar a las empresas por los residuos que producen.')">
+        políticas públicas
+      </button>
+
+      <button onclick="generateText('solutionB2','Las personas podrían cambiar sus hábitos de consumo, comprar menos y reutilizar más.')">
+        hábitos personales
+      </button>
+
+      <p class="generated" id="solutionB2"></p>
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section class="slide">
+    <span class="kicker">Interactive debate</span>
+    <h2>Mini debate</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Grupo A</h3>
+        <p>Defiende esta idea:</p>
+        <p><strong>“La tecnología puede salvar el planeta.”</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Grupo B</h3>
+        <p>Defiende esta idea:</p>
+        <p><strong>“La tecnología no sirve si las personas no cambian sus hábitos.”</strong></p>
+      </div>
+    </div>
+
+    <div class="tip">
+      Use: <strong>Sin embargo</strong>, <strong>por un lado</strong>, <strong>por otro lado</strong>, <strong>desde mi punto de vista</strong>.
+    </div>
+  </section>
+
+  <!-- 15 -->
+  <section class="slide">
+    <span class="kicker">Writing practice</span>
+    <h2>Escribe tu opinión</h2>
+
+    <div class="box">
+      <p>Escreva uma resposta curta em espanhol:</p>
+      <p><strong>¿Qué mensaje transmite WALL·E sobre el futuro?</strong></p>
+
+      <textarea class="reflection-area" id="studentText" placeholder="Escribe aquí tu opinión..."></textarea>
+
+      <button onclick="countWords()">Contar palabras</button>
+      <button onclick="showModelAnswer()">Mostrar modelo</button>
+
+      <p class="mini-score" id="wordCount">Palabras: 0</p>
+      <p class="generated" id="modelAnswer"></p>
+    </div>
+  </section>
+
+  <!-- 16 -->
+  <section class="slide">
+    <span class="kicker">Model answer</span>
+    <h2>Modelo B2</h2>
+
+    <div class="box">
+      <p>
+        Desde mi punto de vista, WALL·E transmite un mensaje muy importante sobre el futuro.
+        La película muestra que el consumo excesivo y la falta de responsabilidad pueden destruir el planeta.
+        Aunque la tecnología puede facilitar la vida, no debería reemplazar la conciencia humana.
+        Si las personas no cambian sus hábitos, es probable que los problemas ambientales sean cada vez más graves.
+        Por eso, creo que necesitamos un futuro más sostenible, con menos desperdicio y más responsabilidad colectiva.
+      </p>
+    </div>
+  </section>
+
+  <!-- 17 -->
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+
+    <div class="box">
+      <p>Haz una presentación oral de 1 minuto sobre el tema:</p>
+      <p><strong>“Tecnología, consumo y futuro del planeta.”</strong></p>
+
+      <ul>
+        <li>describe el problema;</li>
+        <li>menciona una causa;</li>
+        <li>explica una consecuencia;</li>
+        <li>da tu opinión;</li>
+        <li>propón una solución;</li>
+        <li>usa al menos 3 conectores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 18 -->
+  <section class="slide">
+    <span class="kicker">Closing</span>
+    <h2>Resumen de la lección</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Hoy practicaste</h3>
+        <ul>
+          <li>opiniones complejas;</li>
+          <li>causa y consecuencia;</li>
+          <li>hipótesis;</li>
+          <li>debate;</li>
+          <li>propuestas de solución.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Conectores útiles</h3>
+        <p>sin embargo</p>
+        <p>por un lado</p>
+        <p>por otro lado</p>
+        <p>desde mi punto de vista</p>
+        <p>por eso</p>
+      </div>
+    </div>
+
+    <div class="final-message">
+      <strong>Eso fue todo por hoy, ¡hasta la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+
+    <span class="counter" id="counter">1 / 18</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+
+<script>
+  function countWords(){
+    const text = document.getElementById("studentText").value.trim();
+    const words = text ? text.split(/\s+/).length : 0;
+    document.getElementById("wordCount").textContent = `Palabras: ${words}`;
+
+    if(words >= 60){
+      document.getElementById("wordCount").textContent += " — ¡Muy bien para B2!";
+    } else if(words >= 30){
+      document.getElementById("wordCount").textContent += " — Bien, intenta desarrollar un poco más.";
+    } else {
+      document.getElementById("wordCount").textContent += " — Intenta escribir más ideas.";
+    }
+  }
+
+  function showModelAnswer(){
+    document.getElementById("modelAnswer").textContent =
+      "Modelo: Desde mi punto de vista, WALL·E muestra que el futuro del planeta depende de nuestras decisiones actuales. Si consumimos demasiado y no cuidamos los recursos naturales, es posible que enfrentemos problemas más graves. Sin embargo, todavía podemos cambiar nuestros hábitos y construir un futuro más sostenible.";
+  }
+</script>
+</body>
+</html>

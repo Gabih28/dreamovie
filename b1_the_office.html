@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | B1 - Situaciones y opiniones en la oficina</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español B1</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <section class="slide active">
+  <span class="kicker">Lección B1</span>
+  <h1>Situaciones y opiniones<br>en la oficina</h1>
+  <p>Practica opiniones, acuerdos, desacuerdos y comunicación en situaciones cotidianas usando una serie de comedia.</p>
+
+  <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+  <div class="hero">
+    <div class="card">
+      <h3>Objetivos</h3>
+      <ul>
+        <li>describir una situación;</li>
+        <li>dar una opinión más completa;</li>
+        <li>estar de acuerdo o en desacuerdo;</li>
+        <li>proponer una solución.</li>
+      </ul>
+    </div>
+
+    <div class="poster office">
+      <div class="poster-content">
+        <span class="tag">Serie / Comedia</span>
+        <div class="poster-title">La Oficina</div>
+        <div class="poster-sub">Comunicación, humor y situaciones de trabajo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de ver</h2>
+    <div class="box">
+      <ul>
+        <li>¿Has visto una serie sobre trabajo u oficina?</li>
+        <li>¿Qué situaciones pueden ser incómodas en un trabajo?</li>
+        <li>¿Qué hace que una escena sea divertida?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Vocabulary</span>
+    <h2>Palabras de contexto</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>La oficina</h3>
+        <p>jefe / jefa</p>
+        <p>compañero / compañera</p>
+        <p>reunión</p>
+        <p>equipo</p>
+        <p>ambiente de trabajo</p>
+      </div>
+      <div class="card">
+        <h3>Opiniones</h3>
+        <p>Me parece que...</p>
+        <p>Desde mi punto de vista...</p>
+        <p>Estoy de acuerdo.</p>
+        <p>No estoy de acuerdo.</p>
+        <p>Sería mejor...</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+  <span class="kicker">Watch</span>
+  <h2>Mira la escena / tráiler</h2>
+  <p>Observa las relaciones entre los personajes, el ambiente y el tipo de humor.</p>
+
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/XFvZVK-x3R0"
+      title="La Oficina - Tráiler Oficial"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">First impression</span>
+    <h2>¿Qué impresión te dio?</h2>
+    <div class="box">
+      <button onclick="generateText('impression','Me parece que la serie es divertida porque muestra situaciones incómodas de la oficina.')">divertida</button>
+      <button onclick="generateText('impression','Me parece que la serie es irónica porque exagera situaciones reales.')">irónica</button>
+      <button onclick="generateText('impression','Me parece que la serie es extraña, pero interesante.')">extraña</button>
+      <p class="generated" id="impression"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Quiz</span>
+    <h2>Comprensión</h2>
+    <div class="box">
+      <p><strong>La serie parece mostrar...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'feedbackB1')">A) situaciones cómicas en el trabajo</button>
+      <button class="option" onclick="checkAnswer(this,false,'feedbackB1')">B) una competencia deportiva</button>
+      <button class="option" onclick="checkAnswer(this,false,'feedbackB1')">C) una historia de terror</button>
+      <p class="feedback" id="feedbackB1"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Language focus</span>
+    <h2>Dar opiniones más completas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Opinión</h3>
+        <p>Desde mi punto de vista, la situación es incómoda.</p>
+      </div>
+      <div class="card">
+        <h3>Razón</h3>
+        <p>porque los personajes no se comunican bien.</p>
+      </div>
+      <div class="card">
+        <h3>Contraste</h3>
+        <p>Aunque es una escena cómica, también muestra un problema real.</p>
+      </div>
+      <div class="card">
+        <h3>Solución</h3>
+        <p>Sería mejor hablar con respeto y claridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Agree / Disagree</span>
+    <h2>Estar de acuerdo o no</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Estoy de acuerdo</h3>
+        <p>Estoy de acuerdo porque la comunicación es importante.</p>
+      </div>
+      <div class="card">
+        <h3>No estoy de acuerdo</h3>
+        <p>No estoy de acuerdo porque la situación no fue profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Interactive choice</span>
+    <h2>Elige una reacción</h2>
+    <div class="box">
+      <p>Situación: un compañero hace una broma incómoda en una reunión.</p>
+      <button onclick="generateText('reaction','Yo hablaría con respeto y diría que la broma fue incómoda.')">respuesta respetuosa</button>
+      <button onclick="generateText('reaction','Yo intentaría cambiar el tema para evitar un problema mayor.')">cambiar el tema</button>
+      <button onclick="generateText('reaction','Yo pediría una conversación privada después de la reunión.')">hablar después</button>
+      <p class="generated" id="reaction"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine</h2>
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'reunion')">reunión</button>
+        <button class="word" onclick="selectWord(this,'acuerdo')">estar de acuerdo</button>
+        <button class="word" onclick="selectWord(this,'solucion')">solución</button>
+      </div>
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'solucion','matchB1')">forma de resolver un problema</button>
+        <button class="meaning" onclick="matchWord(this,'reunion','matchB1')">encuentro para hablar de trabajo</button>
+        <button class="meaning" onclick="matchWord(this,'acuerdo','matchB1')">tener la misma opinión</button>
+      </div>
+    </div>
+    <p class="feedback" id="matchB1"></p>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Practice</span>
+    <h2>Completa la opinión</h2>
+    <div class="box">
+      <p>Desde mi punto de vista, la situación es __________.</p>
+      <p>Creo que el personaje debería __________.</p>
+      <p>No estoy de acuerdo con __________ porque __________.</p>
+      <p>Sería mejor __________.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Mini debate</span>
+    <h2>Debate rápido</h2>
+    <div class="box">
+      <p><strong>A:</strong> Creo que la escena es divertida.</p>
+      <p><strong>B:</strong> Estoy de acuerdo, pero también es incómoda.</p>
+      <p><strong>A:</strong> ¿Por qué?</p>
+      <p><strong>B:</strong> Porque muestra una mala comunicación.</p>
+      <p><strong>A:</strong> ¿Qué sería mejor?</p>
+      <p><strong>B:</strong> Sería mejor hablar con respeto.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+    <div class="box">
+      <p>Haz una opinión completa sobre una escena de serie.</p>
+      <ul>
+        <li>describe la situación;</li>
+        <li>di tu opinión;</li>
+        <li>explica una razón;</li>
+        <li>usa acuerdo o desacuerdo;</li>
+        <li>propón una solución.</li>
+      </ul>
+    </div>
+
+    <div class="final-message">
+      <strong>Esto fue todo por hoy, ¡hasta la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+    <span class="counter" id="counter">1 / 13</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+</body>
+</html>

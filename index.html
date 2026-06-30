@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineFollow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="brand">
+        <div class="logo-box">
+          <img src="assets/logofyd.png" alt="Logo Follow" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="fallback">▶</div>
+        </div>
+        <div>
+          <h1>DreaMovie</h1>
+          <span>Learning through scenes</span>
+        </div>
+      </div>
+
+      <div class="badge">Follow Your Dreams • Language Experience</div>
+      <p>Acesse a plataforma para visualizar materiais de aula com cenas, vocabulário, atividades e apresentações interativas.</p>
+
+      <label>E-mail</label>
+      <input id="email" type="email" placeholder="exemplo@follow.com">
+
+      <label>Senha</label>
+      <input id="password" type="password" placeholder="Digite sua senha">
+
+      <button onclick="login()" class="primary-btn">Entrar na plataforma</button>
+      <div id="loginError" class="error"></div>
+
+    </div>
+  </section>
+
+  <section id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="avatar">👤</div>
+      <button onclick="showHome()" class="nav active">⌂</button>
+      <button onclick="showHome()" class="nav">⌕</button>
+      <button onclick="logout()" class="nav">↪</button>
+    </aside>
+
+    <main>
+      <section id="homePage">
+        <header class="topbar">
+          <div class="top-title">
+            <img src="assets/logofyd.png" alt="Logo Follow" onerror="this.style.display='none';">
+            <div>
+              <h2>DreaMovie</h2>
+              <p>Plataforma de materiais com cenas, vocabulário e prática guiada.</p>
+            </div>
+          </div>
+          <button class="pill">⭐ <span id="points">0</span>/4</button>
+        </header>
+
+        <section class="hero">
+          <div>
+            <span class="hero-badge">DreaMovie • FYD</span>
+            <h1>Aprenda idiomas através de cenas, cultura e prática guiada.</h1>
+            <p>Uma experiência visual para transformar trechos de filmes, séries e animações em aulas completas.</p>
+          </div>
+          <div class="hero-card">
+            <span>🎬</span>
+            <strong>Scene-Based Learning</strong>
+            <small>materiais por nível, idioma e objetivo</small>
+          </div>
+        </section>
+
+       <section class="intro" id="aulas">
+  <h3>Materiais disponíveis</h3>
+  <p>Escolha uma aula para acessar a apresentação correspondente.</p>
+</section>
+
+        <div id="levelsContainer" class="levels"></div>
+
+        <footer>© desenvolvido por gabrielle harumi okada fontenelle</footer>
+      </section>
+    </main>
+
+    <aside class="right">
+      <div class="progress-title">
+        <span>Progresso total</span>
+        <strong id="progressText">0%</strong>
+      </div>
+      <div class="progress"><span id="totalProgress"></span></div>
+      <div id="sideLessons"></div>
+    </aside>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | A2 - Hablando de películas y series</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español A2</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <section class="slide active">
+  <span class="kicker">Lección A2</span>
+  <h1>Hablando de<br>películas y series</h1>
+  <p>Aprende a expresar opiniones, gustos y recomendaciones usando una escena de Coco.</p>
+
+  <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+  <div class="hero">
+    <div class="card">
+      <h3>Objetivos</h3>
+      <ul>
+        <li>hablar sobre películas y series;</li>
+        <li>decir qué te gusta;</li>
+        <li>dar una opinión simple;</li>
+        <li>recomendar una película.</li>
+      </ul>
+    </div>
+
+    <div class="poster coco">
+      <div class="poster-content">
+        <span class="tag">Disney / Pixar</span>
+        <div class="poster-title">Coco</div>
+        <div class="poster-sub">Opiniones, emociones y recomendaciones en español.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de ver</h2>
+    <div class="box">
+      <ul>
+        <li>¿Cuál es tu película favorita?</li>
+        <li>¿Qué tipo de películas te gustan?</li>
+        <li>¿Prefieres películas de animación, acción o comedia?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+  <span class="kicker">Vocabulary</span>
+  <h2>Géneros y adjetivos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Géneros</h3>
+      <button onclick="speakSpanish('animación')">🔊 animación</button>
+      <button onclick="speakSpanish('comedia')">🔊 comedia</button>
+      <button onclick="speakSpanish('aventura')">🔊 aventura</button>
+      <button onclick="speakSpanish('drama')">🔊 drama</button>
+      <button onclick="speakSpanish('fantasía')">🔊 fantasía</button>
+    </div>
+
+    <div class="card">
+      <h3>Adjetivos</h3>
+      <button onclick="speakSpanish('interesante')">🔊 interesante</button>
+      <button onclick="speakSpanish('divertida')">🔊 divertida</button>
+      <button onclick="speakSpanish('emocionante')">🔊 emocionante</button>
+      <button onclick="speakSpanish('triste')">🔊 triste</button>
+      <button onclick="speakSpanish('bonita')">🔊 bonita</button>
+    </div>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">Useful expressions</span>
+    <h2>Para opinar</h2>
+    <div class="grid">
+      <div class="card"><p><strong>Me gusta</strong> esta película.</p></div>
+      <div class="card"><p><strong>Me encanta</strong> esta historia.</p></div>
+      <div class="card"><p><strong>Creo que</strong> es emocionante.</p></div>
+      <div class="card"><p><strong>Te recomiendo</strong> esta película.</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Watch</span>
+    <h2>Mira la escena / tráiler</h2>
+    <p>Observa la historia, los personajes y las emociones.</p>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/h9Unr35ws-E" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Quiz</span>
+    <h2>Comprensión</h2>
+    <div class="box">
+      <p><strong>La película parece...</strong></p>
+      <button class="option" onclick="checkAnswer(this,false,'feedback2')">A) de terror</button>
+      <button class="option" onclick="checkAnswer(this,true,'feedback2')">B) emocionante y familiar</button>
+      <button class="option" onclick="checkAnswer(this,false,'feedback2')">C) sobre deportes</button>
+      <p class="feedback" id="feedback2"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Phrase builder</span>
+    <h2>Crie uma opinião</h2>
+    <div class="box">
+      <p>Escolha uma opção:</p>
+      <button onclick="generateText('opinion1','En mi opinión, Coco es una película emocionante.')">emocionante</button>
+      <button onclick="generateText('opinion1','En mi opinión, Coco es una película bonita.')">bonita</button>
+      <button onclick="generateText('opinion1','En mi opinión, Coco es una película interesante.')">interesante</button>
+      <p class="generated" id="opinion1"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine</h2>
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'emocionante')">emocionante</button>
+        <button class="word" onclick="selectWord(this,'recomendar')">recomendar</button>
+        <button class="word" onclick="selectWord(this,'favorita')">favorita</button>
+      </div>
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'favorita','match2')">preferida</button>
+        <button class="meaning" onclick="matchWord(this,'emocionante','match2')">que causa emoción</button>
+        <button class="meaning" onclick="matchWord(this,'recomendar','match2')">indicar algo</button>
+      </div>
+    </div>
+    <p class="feedback" id="match2"></p>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Practice</span>
+    <h2>Complete</h2>
+    <div class="box">
+      <p>Mi película favorita es __________.</p>
+      <p>Me gusta porque es __________.</p>
+      <p>Creo que la historia es __________.</p>
+      <p>Te recomiendo __________ porque __________.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Speaking</span>
+    <h2>Mini diálogo</h2>
+    <div class="box">
+      <p><strong>A:</strong> ¿Cuál es tu película favorita?</p>
+      <p><strong>B:</strong> Mi película favorita es __________.</p>
+      <p><strong>A:</strong> ¿Por qué te gusta?</p>
+      <p><strong>B:</strong> Me gusta porque es __________.</p>
+      <p><strong>A:</strong> ¿Me la recomiendas?</p>
+      <p><strong>B:</strong> Sí, te la recomiendo.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+    <div class="box">
+      <p>Recomiende una película o serie en 30 segundos.</p>
+      <p>Use: nombre, género, opinión y recomendación.</p>
+    </div>
+
+    <div class="final-message">
+      <strong>Eso fue todo por hoy, ¡nos vemos en la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+    <span class="counter" id="counter">1 / 11</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | A1 - Saludos con Toy Story</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español A1</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <section class="slide active">
+  <span class="kicker">Lección A1</span>
+  <h1>Saludos con<br>Toy Story</h1>
+  <p>Aprende a saludar, presentarte y hablar de tus amigos en español.</p>
+
+  <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+  <div class="hero">
+    <div class="card">
+      <h3>Objetivos</h3>
+      <ul>
+        <li>saludar en español;</li>
+        <li>decir tu nombre;</li>
+        <li>preguntar el nombre de otra persona;</li>
+        <li>hablar de un amigo.</li>
+      </ul>
+    </div>
+
+    <div class="poster toy">
+      <div class="poster-content">
+        <span class="tag">Animación</span>
+        <div class="poster-title">Saludos y amistad</div>
+        <div class="poster-sub">Una clase inicial para hablar desde el primer contacto.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de empezar</h2>
+    <div class="box">
+      <p>Responde oralmente:</p>
+      <ul>
+        <li>¿Cómo saludas a un amigo?</li>
+        <li>¿Cómo dices tu nombre?</li>
+        <li>¿Quién es tu mejor amigo?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+  <span class="kicker">Vocabulary</span>
+  <h2>Palabras importantes</h2>
+
+  <div class="grid">
+    <div class="card">
+      <button onclick="speakSpanish('Hola')">🔊 Hola</button>
+      <button onclick="speakSpanish('Me llamo')">🔊 Me llamo</button>
+      <button onclick="speakSpanish('Soy')">🔊 Soy</button>
+      <button onclick="speakSpanish('Mucho gusto')">🔊 Mucho gusto</button>
+      <button onclick="speakSpanish('Cómo te llamas')">🔊 ¿Cómo te llamas?</button>
+    </div>
+
+    <div class="card">
+      <p><strong>Hola</strong> = Oi / Olá</p>
+      <p><strong>Me llamo</strong> = Eu me chamo</p>
+      <p><strong>Soy</strong> = Eu sou</p>
+      <p><strong>Mucho gusto</strong> = Prazer em conhecer</p>
+      <p><strong>¿Cómo te llamas?</strong> = Como você se chama?</p>
+    </div>
+  </div>
+</section>
+
+  <section class="slide">
+    <span class="kicker">Watch</span>
+    <h2>Mira la escena</h2>
+    <p>Observa el tráiler y presta atención a los personajes y a la idea de amistad.</p>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/s_qpMMkvHYE" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Quiz</span>
+    <h2>Comprensión rápida</h2>
+    <div class="box">
+      <p><strong>La escena habla principalmente de...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'feedback1')">A) amigos y juguetes</button>
+      <button class="option" onclick="checkAnswer(this,false,'feedback1')">B) comida y restaurante</button>
+      <button class="option" onclick="checkAnswer(this,false,'feedback1')">C) deportes</button>
+      <p class="feedback" id="feedback1"></p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Language focus</span>
+    <h2>Soy x Me llamo</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Soy</h3>
+        <p>Soy Woody.</p>
+        <p>Soy Buzz.</p>
+        <p>Soy estudiante.</p>
+      </div>
+      <div class="card">
+        <h3>Me llamo</h3>
+        <p>Me llamo Woody.</p>
+        <p>Me llamo Buzz.</p>
+        <p>Me llamo Gabrielle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine as expressões</h2>
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'hola')">Hola</button>
+        <button class="word" onclick="selectWord(this,'me-llamo')">Me llamo</button>
+        <button class="word" onclick="selectWord(this,'mucho-gusto')">Mucho gusto</button>
+      </div>
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'mucho-gusto','match1')">Prazer em conhecer</button>
+        <button class="meaning" onclick="matchWord(this,'hola','match1')">Oi / Olá</button>
+        <button class="meaning" onclick="matchWord(this,'me-llamo','match1')">Eu me chamo</button>
+      </div>
+    </div>
+    <p class="feedback" id="match1"></p>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Practice</span>
+    <h2>Complete</h2>
+    <div class="box">
+      <p>Hola, me llamo __________.</p>
+      <p>Soy __________.</p>
+      <p>Mi amigo se llama __________.</p>
+      <p>Mucho gusto.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Speaking</span>
+    <h2>Mini diálogo</h2>
+    <div class="box">
+      <p><strong>A:</strong> Hola, ¿cómo te llamas?</p>
+      <p><strong>B:</strong> Me llamo __________. ¿Y tú?</p>
+      <p><strong>A:</strong> Me llamo __________.</p>
+      <p><strong>B:</strong> Mucho gusto.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+    <div class="box">
+      <p>Apresente-se em espanhol em 15 segundos:</p>
+      <p>Hola, me llamo ________. Soy ________. Mi amigo se llama ________. Mucho gusto.</p>
+    </div>
+
+    <div class="final-message">
+      <strong>Eso fue todo, ¡hasta la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+    <span class="counter" id="counter">1 / 10</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+</body>
+</html>
