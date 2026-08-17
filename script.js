@@ -344,7 +344,13 @@ function updateProgress() {
   if (totalProgress) totalProgress.style.width = `${progress}%`;
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const loginButton = document.getElementById("loginButton");
+
+  if (loginButton) {
+    loginButton.addEventListener("click", login);
+  }
+
   const isLogged = localStorage.getItem("dreamovieLogged") === "true";
 
   if (isLogged) {
@@ -354,3 +360,8 @@ window.addEventListener("DOMContentLoaded", () => {
     updateProgress();
   }
 });
+
+window.login = login;
+window.logout = logout;
+window.showHome = showHome;
+window.openPresentation = openPresentation;
