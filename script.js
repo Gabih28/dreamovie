@@ -63,6 +63,34 @@ const lessons = [
   posterClass: "walle",
   presentationLink: "b2_walle.html"
 }
+  {
+  id: 5,
+  level: "A1",
+  language: "Español",
+  audience: "Teens/Adulto",
+  type: "Filme / animação",
+  title: "Colores y emociones con Monstruos S.A.",
+  subtitle: "Aprende colores, emociones simples y descripciones básicas.",
+  theme: "Colores, emociones y descripciones",
+  cefrPrimary: "A1",
+  cefrSecondary: "",
+  posterClass: "monsters",
+  presentationLink: "a1_monstruos.html"
+},
+{
+  id: 6,
+  level: "A2",
+  language: "Español",
+  audience: "Teens/Adulto",
+  type: "Filme / animação",
+  title: "Emociones y cambios con Del Revés",
+  subtitle: "Practica emociones, cambios de vida y opiniones personales.",
+  theme: "Emociones, cambios y experiencias",
+  cefrPrimary: "A2",
+  cefrSecondary: "",
+  posterClass: "insideout",
+  presentationLink: "a2_del_reves.html"
+}
 ];
 
 const levelOrder = [
