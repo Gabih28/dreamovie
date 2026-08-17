@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | A1 - Colores y emociones con Monstruos S.A.</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español A1</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <!-- 1 -->
+  <section class="slide active">
+    <span class="kicker">Lección A1</span>
+    <h1>Colores y emociones<br>con Monstruos S.A.</h1>
+    <p>Aprende colores, emociones simples y descripciones básicas en español.</p>
+
+    <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+    <div class="hero">
+      <div class="card">
+        <h3>Objetivos</h3>
+        <ul>
+          <li>nombrar colores;</li>
+          <li>identificar emociones simples;</li>
+          <li>describir personajes;</li>
+          <li>usar frases con “es” y “está”.</li>
+        </ul>
+      </div>
+
+      <div class="poster monsters">
+        <div class="poster-content">
+          <span class="tag">Animación</span>
+          <div class="poster-title">Monstruos S.A.</div>
+          <div class="poster-sub">Colores, emociones y descripciones fáciles.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de ver</h2>
+
+    <div class="box">
+      <p>Responde oralmente:</p>
+      <ul>
+        <li>¿Cuál es tu color favorito?</li>
+        <li>¿Cómo te sientes hoy?</li>
+        <li>¿Te gustan las películas de monstruos?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide">
+    <span class="kicker">Vocabulary</span>
+    <h2>Colores</h2>
+
+    <div class="grid">
+      <div class="card">
+        <button onclick="speakSpanish('azul')">🔊 azul</button>
+        <button onclick="speakSpanish('verde')">🔊 verde</button>
+        <button onclick="speakSpanish('morado')">🔊 morado</button>
+        <button onclick="speakSpanish('amarillo')">🔊 amarillo</button>
+        <button onclick="speakSpanish('rojo')">🔊 rojo</button>
+      </div>
+
+      <div class="card">
+        <p><strong>azul</strong> = azul</p>
+        <p><strong>verde</strong> = verde</p>
+        <p><strong>morado</strong> = roxo</p>
+        <p><strong>amarillo</strong> = amarelo</p>
+        <p><strong>rojo</strong> = vermelho</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+    <span class="kicker">Vocabulary</span>
+    <h2>Emociones simples</h2>
+
+    <div class="emotion-board">
+      <div class="emotion-card" onclick="speakSpanish('feliz')">
+        <span>😊</span>
+        <p>feliz</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('triste')">
+        <span>😢</span>
+        <p>triste</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('asustado')">
+        <span>😨</span>
+        <p>asustado</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('nervioso')">
+        <span>😬</span>
+        <p>nervioso</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('contento')">
+        <span>😄</span>
+        <p>contento</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('cansado')">
+        <span>😴</span>
+        <p>cansado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <span class="kicker">Watch</span>
+    <h2>Mira la escena / tráiler</h2>
+    <p>Observa los personajes, los colores y las emociones.</p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/FlsWu1vsO5Q"
+        title="Monstruos S.A. Tráiler Oficial"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <span class="kicker">Quiz</span>
+    <h2>Comprensión rápida</h2>
+
+    <div class="box">
+      <p><strong>La película tiene personajes...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'quizM1')">A) monstruos</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizM1')">B) robots</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizM1')">C) piratas</button>
+      <p class="feedback" id="quizM1"></p>
+    </div>
+
+    <div class="box" style="margin-top:18px;">
+      <p><strong>La escena parece...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'quizM2')">A) divertida</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizM2')">B) muy seria</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizM2')">C) sobre deportes</button>
+      <p class="feedback" id="quizM2"></p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <span class="kicker">Language focus</span>
+    <h2>Es x Está</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Es</h3>
+        <p>Usamos para características.</p>
+        <p><strong>Es azul.</strong></p>
+        <p><strong>Es grande.</strong></p>
+        <p><strong>Es divertido.</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Está</h3>
+        <p>Usamos para estados/emociones.</p>
+        <p><strong>Está feliz.</strong></p>
+        <p><strong>Está asustado.</strong></p>
+        <p><strong>Está nervioso.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <span class="kicker">Phrase builder</span>
+    <h2>Crie uma frase</h2>
+
+    <div class="box">
+      <p>Escolha uma descrição:</p>
+
+      <button onclick="generateText('monsterPhrase','El monstruo es azul y está feliz.')">azul + feliz</button>
+      <button onclick="generateText('monsterPhrase','El monstruo es grande y está asustado.')">grande + asustado</button>
+      <button onclick="generateText('monsterPhrase','El personaje es divertido y está nervioso.')">divertido + nervioso</button>
+
+      <p class="generated" id="monsterPhrase"></p>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine</h2>
+
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'azul')">azul</button>
+        <button class="word" onclick="selectWord(this,'feliz')">feliz</button>
+        <button class="word" onclick="selectWord(this,'asustado')">asustado</button>
+        <button class="word" onclick="selectWord(this,'grande')">grande</button>
+      </div>
+
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'feliz','matchM')">happy / feliz</button>
+        <button class="meaning" onclick="matchWord(this,'grande','matchM')">big / grande</button>
+        <button class="meaning" onclick="matchWord(this,'asustado','matchM')">scared / assustado</button>
+        <button class="meaning" onclick="matchWord(this,'azul','matchM')">blue / azul</button>
+      </div>
+    </div>
+
+    <p class="feedback" id="matchM"></p>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <span class="kicker">Practice</span>
+    <h2>Complete</h2>
+
+    <div class="box">
+      <p>El personaje es __________.</p>
+      <p>El monstruo es de color __________.</p>
+      <p>El personaje está __________.</p>
+      <p>Mi color favorito es __________.</p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <span class="kicker">Speaking</span>
+    <h2>Describe un personaje</h2>
+
+    <div class="box">
+      <p>Modelo:</p>
+      <p><strong>El personaje es grande. Es azul. Está feliz. Me gusta.</strong></p>
+    </div>
+
+    <div class="tip">
+      Agora tente com outro personagem usando: <strong>es</strong>, <strong>está</strong>, um color e uma emoción.
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+
+    <div class="box">
+      <p>Descreva um personagem em espanhol usando:</p>
+      <ul>
+        <li>1 cor;</li>
+        <li>1 emoção;</li>
+        <li>1 característica;</li>
+        <li>uma frase com “me gusta”.</li>
+      </ul>
+    </div>
+
+    <div class="final-message">
+      <strong>Eso fue todo por hoy, ¡hasta la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+
+    <span class="counter" id="counter">1 / 12</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+</body>
+</html>
