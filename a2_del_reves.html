@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreaMovie | A2 - Emociones y cambios con Del Revés</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+
+<body>
+<main>
+  <div class="top">
+    <span class="badge">DreaMovie • Español A2</span>
+    <a class="back-link" href="index.html#aulas">← Voltar para a plataforma</a>
+  </div>
+
+  <!-- 1 -->
+  <section class="slide active">
+    <span class="kicker">Lección A2</span>
+    <h1>Emociones y cambios<br>con Del Revés</h1>
+    <p>Practica emociones, cambios de vida y opiniones personales en español.</p>
+
+    <button onclick="activateAudio()">🔊 Ativar áudio</button>
+
+    <div class="hero">
+      <div class="card">
+        <h3>Objetivos</h3>
+        <ul>
+          <li>hablar de emociones;</li>
+          <li>explicar cambios personales;</li>
+          <li>usar “cuando” y “porque”;</li>
+          <li>dar una opinión sobre una escena.</li>
+        </ul>
+      </div>
+
+      <div class="poster insideout">
+        <div class="poster-content">
+          <span class="tag">Disney / Pixar</span>
+          <div class="poster-title">Del Revés</div>
+          <div class="poster-sub">Emociones, cambios y experiencias personales.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <span class="kicker">Warm-up</span>
+    <h2>Antes de ver</h2>
+
+    <div class="box">
+      <p>Responde oralmente:</p>
+      <ul>
+        <li>¿Qué emoción sientes más durante la semana?</li>
+        <li>¿Qué cosas te ponen feliz?</li>
+        <li>¿Qué cambios son difíciles para ti?</li>
+        <li>¿Crees que todas las emociones son importantes?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide">
+    <span class="kicker">Vocabulary</span>
+    <h2>Emociones</h2>
+
+    <div class="emotion-board">
+      <div class="emotion-card" onclick="speakSpanish('alegría')">
+        <span>😊</span>
+        <p>alegría</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('tristeza')">
+        <span>😢</span>
+        <p>tristeza</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('miedo')">
+        <span>😨</span>
+        <p>miedo</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('ira')">
+        <span>😡</span>
+        <p>ira</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('asco')">
+        <span>🤢</span>
+        <p>asco</p>
+      </div>
+
+      <div class="emotion-card" onclick="speakSpanish('confusión')">
+        <span>😵‍💫</span>
+        <p>confusión</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+    <span class="kicker">Useful expressions</span>
+    <h2>Para hablar de emociones</h2>
+
+    <div class="grid">
+      <div class="card">
+        <button onclick="speakSpanish('Me siento feliz')">🔊 Me siento feliz.</button>
+        <button onclick="speakSpanish('Me siento triste')">🔊 Me siento triste.</button>
+        <button onclick="speakSpanish('Estoy nervioso')">🔊 Estoy nervioso.</button>
+      </div>
+
+      <div class="card">
+        <button onclick="speakSpanish('Cuando cambio de escuela, me siento nervioso')">🔊 Cuando cambio de escuela...</button>
+        <button onclick="speakSpanish('Me siento feliz porque estoy con mis amigos')">🔊 Me siento feliz porque...</button>
+        <button onclick="speakSpanish('Creo que todas las emociones son importantes')">🔊 Creo que...</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <span class="kicker">Watch</span>
+    <h2>Mira la escena / tráiler</h2>
+    <p>Observa las emociones y los cambios en la vida de Riley.</p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/ZOWV9F7LnIQ"
+        title="Del Revés - Tráiler Oficial"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <span class="kicker">Comprehension</span>
+    <h2>Comprensión</h2>
+
+    <div class="box">
+      <p><strong>La película habla principalmente de...</strong></p>
+      <button class="option" onclick="checkAnswer(this,true,'quizR1')">A) emociones y cambios</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizR1')">B) deportes</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizR1')">C) cocina</button>
+      <p class="feedback" id="quizR1"></p>
+    </div>
+
+    <div class="box" style="margin-top:18px;">
+      <p><strong>Riley tiene que adaptarse a...</strong></p>
+      <button class="option" onclick="checkAnswer(this,false,'quizR2')">A) una competición</button>
+      <button class="option" onclick="checkAnswer(this,true,'quizR2')">B) una nueva vida / nuevos cambios</button>
+      <button class="option" onclick="checkAnswer(this,false,'quizR2')">C) una receta difícil</button>
+      <p class="feedback" id="quizR2"></p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <span class="kicker">Language focus</span>
+    <h2>Cuando + emoción</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Cuando...</h3>
+        <p>Cuando estoy con mis amigos, me siento feliz.</p>
+        <p>Cuando tengo una prueba, me siento nervioso.</p>
+        <p>Cuando cambio de rutina, me siento confundido.</p>
+      </div>
+
+      <div class="card">
+        <h3>Porque...</h3>
+        <p>Me siento feliz porque estoy con mi familia.</p>
+        <p>Me siento triste porque extraño mi casa.</p>
+        <p>Estoy nervioso porque es algo nuevo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <span class="kicker">Phrase builder</span>
+    <h2>Crie uma frase emocional</h2>
+
+    <div class="box">
+      <p>Escolha uma opção:</p>
+
+      <button onclick="generateText('emotionPhrase','Cuando estoy con mis amigos, me siento feliz porque puedo ser yo mismo.')">
+        amigos
+      </button>
+
+      <button onclick="generateText('emotionPhrase','Cuando tengo muchos cambios, me siento nervioso porque no sé qué va a pasar.')">
+        cambios
+      </button>
+
+      <button onclick="generateText('emotionPhrase','Cuando pienso en el futuro, me siento emocionado porque tengo muchos sueños.')">
+        futuro
+      </button>
+
+      <p class="generated" id="emotionPhrase"></p>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <span class="kicker">Matching</span>
+    <h2>Combine</h2>
+
+    <div class="grid">
+      <div class="card">
+        <button class="word" onclick="selectWord(this,'alegria')">alegría</button>
+        <button class="word" onclick="selectWord(this,'miedo')">miedo</button>
+        <button class="word" onclick="selectWord(this,'cambio')">cambio</button>
+        <button class="word" onclick="selectWord(this,'confusion')">confusión</button>
+      </div>
+
+      <div class="card">
+        <button class="meaning" onclick="matchWord(this,'cambio','matchR')">mudança</button>
+        <button class="meaning" onclick="matchWord(this,'miedo','matchR')">medo</button>
+        <button class="meaning" onclick="matchWord(this,'alegria','matchR')">felicidade</button>
+        <button class="meaning" onclick="matchWord(this,'confusion','matchR')">não entender bem algo</button>
+      </div>
+    </div>
+
+    <p class="feedback" id="matchR"></p>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <span class="kicker">Interactive choice</span>
+    <h2>Elige una reacción</h2>
+
+    <div class="box">
+      <p>Situação: você mudou de escola e não conhece ninguém.</p>
+
+      <button onclick="generateText('reactionR','Me sentiría nervioso, pero intentaría hablar con alguien nuevo.')">
+        nervioso, pero intento
+      </button>
+
+      <button onclick="generateText('reactionR','Me sentiría triste al principio porque extrañaría a mis amigos.')">
+        triste al principio
+      </button>
+
+      <button onclick="generateText('reactionR','Me sentiría emocionado porque sería una nueva oportunidad.')">
+        emocionado
+      </button>
+
+      <p class="generated" id="reactionR"></p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <span class="kicker">Opinion</span>
+    <h2>Da tu opinión</h2>
+
+    <div class="box">
+      <p><strong>Frase:</strong> “Todas las emociones son importantes.”</p>
+
+      <button onclick="generateText('opinionR','Estoy de acuerdo porque incluso las emociones difíciles nos ayudan a entender lo que sentimos.')">
+        estoy de acuerdo
+      </button>
+
+      <button onclick="generateText('opinionR','Estoy parcialmente de acuerdo porque algunas emociones son difíciles, pero también son necesarias.')">
+        parcialmente
+      </button>
+
+      <button onclick="generateText('opinionR','No estoy totalmente de acuerdo porque algunas emociones pueden ser muy intensas y difíciles de controlar.')">
+        no totalmente
+      </button>
+
+      <p class="generated" id="opinionR"></p>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <span class="kicker">Practice</span>
+    <h2>Complete</h2>
+
+    <div class="box">
+      <p>Cuando estoy __________, me siento __________.</p>
+      <p>Me siento __________ porque __________.</p>
+      <p>Creo que la emoción más importante es __________.</p>
+      <p>En mi opinión, los cambios son __________.</p>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide">
+    <span class="kicker">Speaking</span>
+    <h2>Mini diálogo</h2>
+
+    <div class="box">
+      <p><strong>A:</strong> ¿Cómo te sientes cuando tienes muchos cambios?</p>
+      <p><strong>B:</strong> Me siento __________ porque __________.</p>
+      <p><strong>A:</strong> ¿Qué emoción es más fuerte para ti?</p>
+      <p><strong>B:</strong> Para mí, la emoción más fuerte es __________.</p>
+      <p><strong>A:</strong> ¿Crees que esa emoción es importante?</p>
+      <p><strong>B:</strong> Sí, porque __________.</p>
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section class="slide">
+    <span class="kicker">Final task</span>
+    <h2>Your turn!</h2>
+
+    <div class="box">
+      <p>Fale por 40 segundos sobre uma mudança na sua vida.</p>
+      <ul>
+        <li>diga qual foi a mudança;</li>
+        <li>diga como você se sentiu;</li>
+        <li>explique o motivo com “porque”;</li>
+        <li>use pelo menos 3 emoções;</li>
+        <li>dê uma opinião final.</li>
+      </ul>
+    </div>
+
+    <div class="final-message">
+      <strong>Eso fue todo por hoy, ¡nos vemos en la próxima lección!</strong>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div>
+      <button class="secondary" onclick="prevSlide()">← Anterior</button>
+      <button onclick="nextSlide()">Próximo →</button>
+    </div>
+
+    <span class="counter" id="counter">1 / 14</span>
+  </div>
+</main>
+
+<script src="lesson.js"></script>
+</body>
+</html>
