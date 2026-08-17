@@ -17,7 +17,6 @@ const lessons = [
     subtitle: "Aprende a saludar, presentarte y hablar de tus amigos.",
     theme: "Saludos, nombres y amistad",
     cefrPrimary: "A1",
-    cefrSecondary: "",
     posterClass: "toy",
     presentationLink: "a1_toy_story.html"
   },
@@ -31,7 +30,6 @@ const lessons = [
     subtitle: "Aprende a expresar opiniones y recomendaciones en español.",
     theme: "Opiniones y recomendaciones",
     cefrPrimary: "A2",
-    cefrSecondary: "",
     posterClass: "coco",
     presentationLink: "a2_coco.html"
   },
@@ -45,52 +43,48 @@ const lessons = [
     subtitle: "Practica opiniones, acuerdos, desacuerdos y situaciones cotidianas.",
     theme: "Opiniones, trabajo y comunicación",
     cefrPrimary: "B1",
-    cefrSecondary: "",
     posterClass: "office",
     presentationLink: "b1_the_office.html"
   },
   {
-  id: 4,
-  level: "B2",
-  language: "Español",
-  audience: "Teens/Adulto",
-  type: "Filme / animação",
-  title: "Tecnología, planeta y futuro",
-  subtitle: "Debate problemas ambientales, consumo y tecnología usando WALL·E.",
-  theme: "Medio ambiente, tecnología y sociedad",
-  cefrPrimary: "B2",
-  cefrSecondary: "",
-  posterClass: "walle",
-  presentationLink: "b2_walle.html"
-}
+    id: 4,
+    level: "B2",
+    language: "Español",
+    audience: "Teens/Adulto",
+    type: "Filme / animação",
+    title: "Tecnología, planeta y futuro",
+    subtitle: "Debate problemas ambientales, consumo y tecnología usando WALL·E.",
+    theme: "Medio ambiente, tecnología y sociedad",
+    cefrPrimary: "B2",
+    posterClass: "walle",
+    presentationLink: "b2_walle.html"
+  },
   {
-  id: 5,
-  level: "A1",
-  language: "Español",
-  audience: "Teens/Adulto",
-  type: "Filme / animação",
-  title: "Colores y emociones con Monstruos S.A.",
-  subtitle: "Aprende colores, emociones simples y descripciones básicas.",
-  theme: "Colores, emociones y descripciones",
-  cefrPrimary: "A1",
-  cefrSecondary: "",
-  posterClass: "monsters",
-  presentationLink: "a1_monstruos.html"
-},
-{
-  id: 6,
-  level: "A2",
-  language: "Español",
-  audience: "Teens/Adulto",
-  type: "Filme / animação",
-  title: "Emociones y cambios con Del Revés",
-  subtitle: "Practica emociones, cambios de vida y opiniones personales.",
-  theme: "Emociones, cambios y experiencias",
-  cefrPrimary: "A2",
-  cefrSecondary: "",
-  posterClass: "insideout",
-  presentationLink: "a2_del_reves.html"
-}
+    id: 5,
+    level: "A1",
+    language: "Español",
+    audience: "Teens/Adulto",
+    type: "Filme / animação",
+    title: "Colores y emociones con Monstruos S.A.",
+    subtitle: "Aprende colores, emociones simples y descripciones básicas.",
+    theme: "Colores, emociones y descripciones",
+    cefrPrimary: "A1",
+    posterClass: "monsters",
+    presentationLink: "a1_monstruos.html"
+  },
+  {
+    id: 6,
+    level: "A2",
+    language: "Español",
+    audience: "Teens/Adulto",
+    type: "Filme / animação",
+    title: "Emociones y cambios con Del Revés",
+    subtitle: "Practica emociones, cambios de vida y opiniones personales.",
+    theme: "Emociones, cambios y experiencias",
+    cefrPrimary: "A2",
+    posterClass: "insideout",
+    presentationLink: "a2_del_reves.html"
+  }
 ];
 
 const levelOrder = [
@@ -102,49 +96,89 @@ const levelOrder = [
 ];
 
 let selectedLesson = null;
-let completedLessons = JSON.parse(localStorage.getItem("dreamovieCompletedLessons")) || [];
+let completedLessons = [];
+
+try {
+  completedLessons = JSON.parse(localStorage.getItem("dreamovieCompletedLessons")) || [];
+} catch (error) {
+  completedLessons = [];
+  localStorage.setItem("dreamovieCompletedLessons", JSON.stringify([]));
+}
 
 function login() {
-  const email = document.getElementById("email").value.trim().toLowerCase();
-  const password = document.getElementById("password").value.trim();
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
   const error = document.getElementById("loginError");
+
+  if (!emailInput || !passwordInput) {
+    alert("Erro: os campos de login não foram encontrados no index.html.");
+    return;
+  }
+
+  const email = emailInput.value.trim().toLowerCase();
+  const password = passwordInput.value.trim();
 
   const foundUser = usersDatabase.find(user => {
     return user.email.toLowerCase() === email && user.password === password;
   });
 
   if (!foundUser) {
-    error.innerText = "Usuário ou senha incorretos.";
+    if (error) {
+      error.innerText = "Usuário ou senha incorretos.";
+    }
     return;
   }
 
-  error.innerText = "";
-  localStorage.setItem("dreamovieLogged", "true");
+  if (error) {
+    error.innerText = "";
+  }
 
-  document.getElementById("loginScreen").classList.add("hidden");
-  document.getElementById("app").classList.remove("hidden");
+  localStorage.setItem("dreamovieLogged", "true");
+  showPlatform();
+}
+
+function logout() {
+  localStorage.removeItem("dreamovieLogged");
+
+  const app = document.getElementById("app");
+  const loginScreen = document.getElementById("loginScreen");
+
+  if (app) app.classList.add("hidden");
+  if (loginScreen) loginScreen.classList.remove("hidden");
+}
+
+function showPlatform() {
+  const app = document.getElementById("app");
+  const loginScreen = document.getElementById("loginScreen");
+
+  if (loginScreen) loginScreen.classList.add("hidden");
+  if (app) app.classList.remove("hidden");
 
   renderLessonsByLevel();
   updateProgress();
 
   setTimeout(() => {
     const aulas = document.getElementById("aulas");
-    if (aulas) aulas.scrollIntoView({ behavior: "smooth" });
+    if (aulas) {
+      aulas.scrollIntoView({ behavior: "smooth" });
+    }
   }, 150);
-}
-
-function logout() {
-  localStorage.removeItem("dreamovieLogged");
-  document.getElementById("app").classList.add("hidden");
-  document.getElementById("loginScreen").classList.remove("hidden");
 }
 
 function renderLessonsByLevel() {
   const levelsContainer = document.getElementById("levelsContainer");
   const sideLessons = document.getElementById("sideLessons");
 
+  if (!levelsContainer) {
+    console.error("Erro: não encontrei o elemento #levelsContainer no index.html");
+    return;
+  }
+
   levelsContainer.innerHTML = "";
-  sideLessons.innerHTML = "";
+
+  if (sideLessons) {
+    sideLessons.innerHTML = "";
+  }
 
   const groupedLessons = lessons.reduce((groups, lesson) => {
     if (!groups[lesson.level]) {
@@ -179,7 +213,10 @@ function renderLessonsByLevel() {
 
     lessonsFromLevel.forEach(lesson => {
       row.appendChild(createLessonCard(lesson));
-      sideLessons.appendChild(createSideLesson(lesson));
+
+      if (sideLessons) {
+        sideLessons.appendChild(createSideLesson(lesson));
+      }
     });
 
     levelsContainer.appendChild(section);
@@ -266,7 +303,10 @@ function createSideLesson(lesson) {
 function openPresentation(id) {
   selectedLesson = lessons.find(lesson => lesson.id === id);
 
-  if (!selectedLesson) return;
+  if (!selectedLesson) {
+    alert("Lição não encontrada.");
+    return;
+  }
 
   if (!selectedLesson.presentationLink || selectedLesson.presentationLink === "#") {
     alert("O link da apresentação ainda não foi cadastrado para este material.");
@@ -274,12 +314,7 @@ function openPresentation(id) {
   }
 
   markLessonAsStarted(selectedLesson.id);
-
-  if (selectedLesson.presentationLink.startsWith("http")) {
-    window.open(selectedLesson.presentationLink, "_blank");
-  } else {
-    window.location.href = selectedLesson.presentationLink;
-  }
+  window.location.href = selectedLesson.presentationLink;
 }
 
 function markLessonAsStarted(id) {
@@ -289,18 +324,10 @@ function markLessonAsStarted(id) {
   }
 
   updateProgress();
-  renderLessonsByLevel();
 }
 
 function showHome() {
-  document.getElementById("loginScreen").classList.add("hidden");
-  document.getElementById("app").classList.remove("hidden");
-
-  renderLessonsByLevel();
-  updateProgress();
-
-  const aulas = document.getElementById("aulas");
-  if (aulas) aulas.scrollIntoView({ behavior: "smooth" });
+  showPlatform();
 }
 
 function updateProgress() {
@@ -308,26 +335,22 @@ function updateProgress() {
   const completed = completedLessons.length;
   const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
 
-  document.getElementById("points").innerText = completed;
-  document.getElementById("progressText").innerText = `${progress}%`;
-  document.getElementById("totalProgress").style.width = `${progress}%`;
+  const points = document.getElementById("points");
+  const progressText = document.getElementById("progressText");
+  const totalProgress = document.getElementById("totalProgress");
+
+  if (points) points.innerText = completed;
+  if (progressText) progressText.innerText = `${progress}%`;
+  if (totalProgress) totalProgress.style.width = `${progress}%`;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
   const isLogged = localStorage.getItem("dreamovieLogged") === "true";
 
   if (isLogged) {
-    document.getElementById("loginScreen").classList.add("hidden");
-    document.getElementById("app").classList.remove("hidden");
-
+    showPlatform();
+  } else {
     renderLessonsByLevel();
     updateProgress();
-
-    if (window.location.hash === "#aulas") {
-      setTimeout(() => {
-        const aulas = document.getElementById("aulas");
-        if (aulas) aulas.scrollIntoView({ behavior: "smooth" });
-      }, 200);
-    }
   }
 });
