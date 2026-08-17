@@ -1265,3 +1265,32 @@ footer {
     radial-gradient(circle at 82% 20%, rgba(34,197,94,0.38), transparent 28%),
     linear-gradient(135deg, #1c1206 0%, #3f2405 42%, #064e3b 100%);
 }
+
+/* NOVA A1 - Monstruos S.A. */
+.poster.monsters{
+  --accent:#22d3ee;
+  --accent-2:#a855f7;
+  --accent-soft:rgba(34,211,238,0.25);
+  --border-glow:rgba(34,211,238,0.72);
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.96), rgba(0,0,0,0.22)),
+    radial-gradient(circle at 20% 18%, rgba(34,211,238,0.58), transparent 30%),
+    radial-gradient(circle at 82% 20%, rgba(168,85,247,0.50), transparent 28%),
+    linear-gradient(135deg, #062733 0%, #101010 46%, #3b0764 100%);
+}
+
+/* NOVA A2 - Del Revés / Inside Out */
+.poster.insideout{
+  --accent:#f472b6;
+  --accent-2:#38bdf8;
+  --accent-soft:rgba(244,114,182,0.25);
+  --border-glow:rgba(244,114,182,0.74);
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.96), rgba(0,0,0,0.20)),
+    radial-gradient(circle at 18% 18%, rgba(244,114,182,0.58), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(56,189,248,0.48), transparent 28%),
+    radial-gradient(circle at 50% 10%, rgba(250,204,21,0.22), transparent 24%),
+    linear-gradient(135deg, #2b0a2f 0%, #111827 45%, #075985 100%);
+}
